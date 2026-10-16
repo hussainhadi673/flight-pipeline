@@ -5,9 +5,6 @@
 A small, production-style **ETL pipeline** that collects live air traffic and weather around an airport,
 cleans and enriches it with **pandas**, checks data quality, and loads it idempotently into SQL.
 
-It is a public, simplified example of the kind of aviation data pipelines I build professionally
-(multi-source flight data, weather, AWS). No client code or data is included.
-
 ```
  OpenSky (ADS-B states) ─┐                                     ┌─► flight_snapshots
                          ├─► extract ─► transform ─► quality ─► load (upsert)
