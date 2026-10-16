@@ -1,0 +1,17 @@
+[project]
+name = "flight-pipeline"
+version = "0.1.0"
+description = "Airport traffic & weather ETL: OpenSky + Open-Meteo -> pandas -> SQL"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.1", "requests>=2.31"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
